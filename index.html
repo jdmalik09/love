@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Detector</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input {
+      padding: 15px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Type Something...</h1>
+  <input type="text" id="loveInput" placeholder="Type here..." />
+
+  <script>
+    const input = document.getElementById('loveInput');
+    input.addEventListener('input', function() {
+      if (input.value.toLowerCase().includes("i love you")) {
+        window.location.href = "love.html";
+      }
+    });
+  </script>
+</body>
+</html>
